@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .section-1{
+            position: fixed;
+        }
+        .login-fullview{
+            width:100vw;
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            align-items: center;
+            background-image: url("images/seeds.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .login-wrapper{
+            width: 60%;
+            height: 70%;
+            display: grid;
+            justify-content: center;
+        }
+        #img-login{
+            width:100%;
+            height: 100%;
+            box-shadow: 1px 4px 14px rgba(0, 0, 0, 0.5);
+        }
+        
+        form{
+            max-width: 500px;
+            height: 100%;
+        }
+        .Login-form{
+            background-color: transparent;
+            max-width: 500px;
+            min-width: 300px;
+        }
+        .login-Name{
+            font-size: 30px;
+            margin: 5px 5px 5px 5px;
+            font-family: sans-serif;
+            text-decoration: underline;
+            color:white;
+        }
+        .login-idp{
+            font-family:verdana;
+            padding: 10px;
+            max-width: 31.25em;
+        }
+        .label-ep{
+            margin: 5px 5px 5px 0px;
+        }
+        .login-idp>div>input{
+            min-width: 18em;
+            height: 30px;
+            border: none;
+            padding-left: 20px;
+        border-radius:30px;
+        }
+        .login-idp>div>label{
+            color: white;
+        }
+        .details{
+            max-width:500px;
+            min-width: 200px;
+            height: 100%;
+            display: grid;
+            justify-content: center;
+            align-content:center;
+            background-color: transparent;
+            box-shadow: 1px 4px 14px rgba(0, 0, 0, 0.5);
+            background-color: transparent;
+        backdrop-filter: blur(10px);
+
+        }
+        .submit-btn{
+            padding: 15px 5px 5px 0px;
+        }
+       #btn-sub{
+        border: none;
+        width: 70px;
+        height: 30px;
+        margin: 5px 5px 5px 10px;
+        border-radius:30px;
+        cursor: pointer;
+       }
+
+       .section-2{
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100vh;
+            background-color: transparent;
+            backdrop-filter: blur(30px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-family: 'Fredericka the Great', cursive;
+            font-size: 30px;
+        }
+        .loading{
+            width: 50%;
+            height: 60%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid white;
+            background-color: transparent;
+            transition: all ease 3s;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        .nestedCircle{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border:5px solid white  ;
+            border-right:  5px solid transparent ;
+            border-left:  5px solid transparent ;
+            background-color: transparent;
+            animation: circles 2s infinite;
+        }
+        @keyframes circles {
+            from{
+                transform: rotate(-360deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+  
+       @media (max-width:320px) and (min-width:50px)
+       {
+        
+        .login-fullview{
+            background-image: url("images/pot-image.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+             overflow-y:scroll;
+             
+        }
+        .login-wrapper{
+            grid-template-columns: 100%;
+            
+        }
+        
+        .Login-form{
+            min-width:100px;
+            max-height: 400px;
+        } 
+       .details{
+        box-shadow: 1px 4px 40px rgba(0, 0, 0, 0.5);
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+
+       }
+       .login-Name{
+            color:white;
+        }
+        .login-idp>div>label{
+            color:white;
+        }
+        .login-idp>div>input{
+        box-shadow: 1px 4px 40px rgba(0, 0, 0, 0.5);
+        }
+        #btn-sub{
+            background-color: orange;
+            color: white;
+            font-size: 17px;
+            box-shadow: 1px 4px 40px rgba(0,0,0,0.5);
+        }
+        .login-idp>div>input{
+            min-width: 1em;
+            max-width: 8em;
+        }
+       }
+       @media (max-width:375px) and (min-width:320px)
+       {
+        .login-fullview{
+            background-image: url("images/pot-image.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            overflow-y:scroll;
+
+        }
+        
+        .login-wrapper{
+            grid-template-columns: 100%;
+            
+        }
+       
+        .Login-form{
+            min-width: 250px;
+            max-height: 500px;
+            background-color: transparent;
+        } 
+       .details{
+        box-shadow: 1px 4px 40px rgba(0, 0, 0, 0.5);
+
+       }
+       .login-Name{
+            color:white;
+        }
+        .login-idp>div>label{
+            color:white;
+        }
+        .login-idp>div>input{
+        box-shadow: 1px 4px 40px rgba(0, 0, 0, 0.5);
+        }
+        #btn-sub{
+            background-color: orange;
+            color: white;
+            font-size: 17px;
+            box-shadow: 1px 4px 40px rgba(0,0,0,0.5);
+        }
+        
+       }
+       @media (max-width:425px) and (min-width:376px)
+       {
+        .login-fullview{
+            background-image: url("images/pot-image.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+           min-width: 101vw;
+           overflow-y:scroll;
+
+        }
+        
+        .login-wrapper{
+            grid-template-columns: 100%;
+        }
+        
+        .Login-form{
+            min-width: 290px;
+            max-height: 500px;
+            background-color: transparent;
+        } 
+       .details{
+        box-shadow: 1px 4px 40px rgba(0, 0, 0, 0.5);
+       }
+       .login-Name{
+            color:white;
+        }
+        .login-idp>div>label{
+            color:white;
+        }
+        .login-idp>div>input{
+        box-shadow: 1px 4px 40px rgba(0, 0, 0, 0.5);
+        }
+        #btn-sub{
+            background-color: orange;
+            color: white;
+            font-size: 17px;
+            box-shadow: 1px 4px 40px rgba(0,0,0,0.5);
+        }
+       }
+       @media (max-width:768px) and (min-width:426px)
+       {
+        .login-fullview{
+            background-image: url("images/pot-image.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            overflow-y:scroll;
+
+        }
+        
+        .login-wrapper{
+            grid-template-columns: 100%;
+        }
+        .Login-form{
+            min-width: 290px;
+            max-height: 500px;
+            background-color: transparent;
+        } 
+       .details{
+        box-shadow: 1px 4px 40px rgba(0, 0, 0, 0.5);
+       }
+       .login-Name{
+            color:white;
+        }
+        .login-idp>div>label{
+            color:white;
+        }
+        .login-idp>div>input{
+        box-shadow: 1px 4px 40px rgba(0, 0, 0, 0.5);
+        min-width: 20em;
+        }
+        #btn-sub{
+            background-color: orange;
+            color: white;
+            font-size: 17px;
+            box-shadow: 1px 4px 40px rgba(0,0,0,0.5);
+        }
+        
+        
+        
+       }
+    </style>
+</head>
+<body>
+    <section class="section-1">
+            <div class="login-fullview">
+                <div class="login-wrapper">
+                    <div class="Login-form">
+                        <form action="">
+                           <div class="details">
+                            <div class="login-Name">Login</div>
+                            <div class="login-idp">
+                                <div class="label-ep"> <label for="">Email</label> </div>
+                                <div> <input type="email" placeholder="Email"> </div>
+                            </div>
+                            <div class="login-idp">
+                                <div class="label-ep"><label for="">Password</label></div>
+                                <div><input type="password" placeholder="Password">  </div>
+                            </div>
+                            <div class="submit-btn">
+                                <button type="submit" id="btn-sub">submit</button>
+                            </div>
+                            <div>
+                           
+                            </div>
+                           </div>                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="section-2">
+        <!-- <video src="videos/production ID_4990245.mp4" loop autoplay muted></video> -->
+            <div class="loading">
+                    <div class="circle">
+                        <div class="nestedCircle"></div>
+                    </div>
+                    Loading..
+            </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <script>
+        const section2=document.querySelector('.section-2');
+        window.addEventListener('load',(e)=>{
+            e.preventDefault();
+            setTimeout(()=>{
+                section2.style.display="none";
+            },0);
+        })
+    </script>
+</body>
+</html>
